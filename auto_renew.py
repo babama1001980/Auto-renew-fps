@@ -38,12 +38,12 @@ def add_cookies(driver):
         {
             'name': 'PTERODACTYL_SESSION',
             'value': os.environ['PTERODACTYL_SESSION'],
-            'domain': '.tickhosting.com'
+            'domain': '.fps.ms'
         },
         {
             'name': 'pterodactyl_session',
             'value': os.environ['PTERODACTYL_SESSION'],
-            'domain': '.tickhosting.com'
+            'domain': '.fps.ms'
         }
     ]
     for cookie in cookies:
@@ -58,7 +58,7 @@ def add_cookies(driver):
 def try_login(driver):
     try:
         print("\nAttempting to navigate to dashboard...")
-        driver.get("https://tickhosting.com")
+        driver.get("https://fps.ms")
         time.sleep(5)
         print(f"URL after navigation: {driver.current_url}")
         
@@ -164,7 +164,7 @@ def main():
         driver.set_page_load_timeout(30)
         
         print("Navigating to website...")
-        driver.get("https://tickhosting.com")
+        driver.get("https://fps.ms")
         time.sleep(5)
         
         print("Adding cookies...")
